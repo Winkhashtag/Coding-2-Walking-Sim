@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
  
 	public float moveSpeed = 12;
     private float gravity = 9.8f;
-    private float groundCheckRadius = 0.15f;
+    public float groundCheckRadius = 0.15f;
 
     private CharacterController controller;
 

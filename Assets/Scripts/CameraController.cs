@@ -4,7 +4,7 @@ public class CameraController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
-	public float mouseSensitivity = 500;
+	public float mouseSensitivity = 1000;
     private float xRotation;
 
     private void Start()
