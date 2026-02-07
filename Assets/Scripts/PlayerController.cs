@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
  
 	public float moveSpeed = 12;
-    private float gravity = 9.8f;
+    public float gravity = 9.8f;
     public float groundCheckRadius = 0.15f;
 
     private CharacterController controller;
