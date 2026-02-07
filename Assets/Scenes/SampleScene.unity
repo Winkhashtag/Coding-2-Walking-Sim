@@ -8674,6 +8674,7 @@ GameObject:
   - component: {fileID: 1743206656}
   - component: {fileID: 1743206655}
   - component: {fileID: 1743206654}
+  - component: {fileID: 1743206658}
   m_Layer: 0
   m_Name: soundCollider 2
   m_TagString: Untagged
@@ -8705,7 +8706,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 17e4e8b76cad21f4fa342c6779614924, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 474693b59b8333b4d9ab01a58390ae8f, type: 3}
+  m_Resource: {fileID: 8300000, guid: acb055e3f950ebc4984bb9fed4d01eed, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -8827,6 +8828,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1743206658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743206653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123a3084d0822644fa0ad879b80c60be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OneTimeCollider
 --- !u!1001 &1799555438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8945,8 +8958,8 @@ Transform:
   m_GameObject: {fileID: 1830643249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.120001, y: 1.71, z: 19.700005}
-  m_LocalScale: {x: 10.236279, y: 3.1311, z: 11.612478}
+  m_LocalPosition: {x: 7.1, y: 1.71, z: 35.6}
+  m_LocalScale: {x: 114.79755, y: 5.1691785, z: 124.65123}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8962,11 +8975,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 17e4e8b76cad21f4fa342c6779614924, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: acb055e3f950ebc4984bb9fed4d01eed, type: 3}
+  m_Resource: {fileID: 8300000, guid: 93169bcf5fd80984e85cdcc5dcff2290, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -9060,7 +9073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1e33e8d976e874f99db07af00140da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playAudio
-  fadeTimeInSeconds: 0
+  fadeTimeInSeconds: 2
 --- !u!1 &1868135361
 GameObject:
   m_ObjectHideFlags: 0
@@ -9232,7 +9245,7 @@ Light:
   m_Type: 2
   m_Color: {r: 0.764151, g: 0.16220188, b: 0.16220188, a: 1}
   m_Intensity: 500
-  m_Range: 12.8
+  m_Range: 13.31
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -9273,7 +9286,7 @@ Light:
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1.4702332, y: 1}
-  m_BounceIntensity: 0
+  m_BounceIntensity: 4.89
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
