@@ -37,8 +37,9 @@ public class playAudio : MonoBehaviour
         if(other.tag == "Player")
         {
             StopAllCoroutines();
-          
-            StartCoroutine(FadeAudio(false));
+            
+            StartCoroutine(FadeAudioOut(true));
+           
         }
     }
 
@@ -62,7 +63,26 @@ public class playAudio : MonoBehaviour
         audio.volume = 1;
     }
 
-   
+
+    private IEnumerator FadeAudioOut(bool fadeOut)
+    {
+        float timer = 0;
+        //if fadeIn is true set to 0, else set to 1
+        float start = fadeOut ? audio.volume : 0;
+        //if fadeIn is true set to 1, else set to 0
+        float end = fadeOut ? 0 : 1;
+
+        if (fadeOut)
+
+        while (timer < fadeTimeInSeconds)
+        {
+            audio.volume = Mathf.Lerp(start, end, timer / fadeTimeInSeconds); // 
+            timer += Time.deltaTime;
+            yield return null; //will wait one frame until timer is greater than fade time
+        }
+
+        audio.volume = 0;
+    }
 }
 
 
