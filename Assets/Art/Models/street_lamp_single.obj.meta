@@ -3,7 +3,22 @@ guid: f01a6ff1792b0f2438122f5a0800d9fb
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pSphere1Mat
+    second: {fileID: 2100000, guid: ced39929eb80eaf4494c880052ac55ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface19Mat
+    second: {fileID: 2100000, guid: 3ab9a70dd0021434eb07246878c08fc8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: polySurface21Mat
+    second: {fileID: 2100000, guid: 597bbcb5f4436b84ab0708d60d281c18, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
