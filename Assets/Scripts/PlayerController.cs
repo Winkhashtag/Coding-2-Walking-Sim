@@ -16,6 +16,9 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask groundLayer;
 
+    private bool playingFootsteps = false;
+    public float footseptsSpeed = 0.5f;
+
     private void Awake()
     {
 
@@ -28,7 +31,25 @@ public class PlayerController : MonoBehaviour
         CheckIsGrounded();
         Move();
         ApplyGravity();
-    
+
+
+        bool isMoving =
+      Input.GetKey(KeyCode.W) ||
+      Input.GetKey(KeyCode.A) ||
+      Input.GetKey(KeyCode.S) ||
+      Input.GetKey(KeyCode.D);
+
+        if (isMoving && isGrounded)
+        {
+            if (!playingFootsteps)
+                StartFootSteps();
+        }
+        else
+        {
+            if (playingFootsteps)
+                StopFootSteps();
+        }
+
     }
     private void Move()
     {
@@ -37,6 +58,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
         controller.Move(move);
+       
+        //start footsteps
+        
     }
 
     private void CheckIsGrounded()
@@ -53,4 +77,19 @@ public class PlayerController : MonoBehaviour
         controller.Move(velocity);
     }
 
+    void StartFootSteps()
+    {
+        playingFootsteps = true;
+        InvokeRepeating(nameof(PlayFootStep), 0f, footseptsSpeed);
+    }
+    void StopFootSteps()
+    {
+        playingFootsteps = false;
+        CancelInvoke(nameof(PlayFootStep));
+    }
+
+    void PlayFootStep()
+    {
+        SoundEffectManager.Play("Footstep");
+    }
 }

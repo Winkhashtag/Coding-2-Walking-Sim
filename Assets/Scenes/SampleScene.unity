@@ -5296,10 +5296,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 10
   gravity: 9.8
-  groundCheckRadius: 3
+  groundCheckRadius: 0.25
   groundLayer:
     serializedVersion: 2
     m_Bits: 4294967295
+  footseptsSpeed: 0.7
 --- !u!143 &317081351
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5856,6 +5857,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1132636614}
+  - {fileID: 1433020501}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7350,9 +7352,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   soundEffectGroups:
-  - name: Walking
+  - name: Footstep
     audioClips:
-    - {fileID: 8300000, guid: d8166d944abb9a84182731a6f3c3aff4, type: 3}
+    - {fileID: 8300000, guid: 5993ca890cdba9b46b4e7b80a52f9d19, type: 3}
+    - {fileID: 8300000, guid: eaab5893b5492f4429e87895e766127d, type: 3}
+    - {fileID: 8300000, guid: d9d17dafd115e9448ac549477c0155ef, type: 3}
+    - {fileID: 8300000, guid: cbbb705784960d848a98c8729dd26199, type: 3}
+    - {fileID: 8300000, guid: d75244041665e604093b3dee5a3c9967, type: 3}
+    - {fileID: 8300000, guid: 077f720c7fa135e40ab04636a93ddf29, type: 3}
+    - {fileID: 8300000, guid: 17581fab881407e4eb7c75825ad0008a, type: 3}
+    - {fileID: 8300000, guid: 086cf2f76c47baa40ab4d3d443ae8833, type: 3}
+    - {fileID: 8300000, guid: 203fe23e5d12a9d419dbe9f1110bbfec, type: 3}
+    - {fileID: 8300000, guid: b057ce186c3e6144389b82481cc9b1da, type: 3}
+    - {fileID: 8300000, guid: a07150a358153c2439032f750f5be512, type: 3}
+    - {fileID: 8300000, guid: 428095b4039bdb449a1c0f0db8466984, type: 3}
+    - {fileID: 8300000, guid: eeb8e3824ce6c28458ac8f335182b36d, type: 3}
+    - {fileID: 8300000, guid: 79feb4cde8ffec14085107fbeab76811, type: 3}
+    - {fileID: 8300000, guid: 903e7b15819db98459f322a839a0b6d0, type: 3}
+    - {fileID: 8300000, guid: 6bce0c5136a5017409f24ac699348d33, type: 3}
+    - {fileID: 8300000, guid: 24200d622cf0c934ca9af8b1b598e18c, type: 3}
+    - {fileID: 8300000, guid: 6e98de8543b1e41439830d80c91d3dc4, type: 3}
+    - {fileID: 8300000, guid: bb7471e48884a30419b552f523482cd9, type: 3}
+    - {fileID: 8300000, guid: 6759e12a57c0fa843828ca7ac1579100, type: 3}
+    - {fileID: 8300000, guid: e47c19c99762c6e4792ddd1b78f95648, type: 3}
   - name: Explosion
     audioClips:
     - {fileID: 8300000, guid: acb055e3f950ebc4984bb9fed4d01eed, type: 3}
@@ -8056,7 +8078,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433020500}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.7504, y: 2.7504, z: 2.7504}
   m_ConstrainProportionsScale: 0
@@ -8064,7 +8086,7 @@ RectTransform:
   - {fileID: 1973975068}
   - {fileID: 1691253183}
   - {fileID: 75799767}
-  m_Father: {fileID: 1500311408}
+  m_Father: {fileID: 371673313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8246,7 +8268,7 @@ GameObject:
   - component: {fileID: 1444961011}
   - component: {fileID: 1444961010}
   - component: {fileID: 1444961009}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8460,108 +8482,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 239239769}
   m_LocalEulerAnglesHint: {x: -4.998, y: 0, z: 0}
---- !u!1 &1500311404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1500311408}
-  - component: {fileID: 1500311407}
-  - component: {fileID: 1500311406}
-  - component: {fileID: 1500311405}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1500311405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500311404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1500311406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500311404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!223 &1500311407
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500311404}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!224 &1500311408
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1500311404}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1433020501}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1503252802
 GameObject:
   m_ObjectHideFlags: 0
@@ -14929,7 +14849,7 @@ GameObject:
   - component: {fileID: 2013479802}
   - component: {fileID: 2013479801}
   - component: {fileID: 2013479800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: park
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15460,4 +15380,3 @@ SceneRoots:
   - {fileID: 1786242800}
   - {fileID: 1850880291}
   - {fileID: 1116012268}
-  - {fileID: 1500311408}
