@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
  
 	public float moveSpeed = 12;
-    public float gravity = 9.8f;
+    public float gravity = -9.8f;
     public float groundCheckRadius = 0.15f;
 
     private CharacterController controller;
@@ -91,5 +91,13 @@ public class PlayerController : MonoBehaviour
     void PlayFootStep()
     {
         SoundEffectManager.Play("Footstep");
+    }
+
+    void OnDrawGizmos()
+    {
+        if (feet == null) return;
+
+        Gizmos.color = isGrounded ? Color.green : Color.red;
+        Gizmos.DrawWireSphere(feet.position, groundCheckRadius);
     }
 }
