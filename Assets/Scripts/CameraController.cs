@@ -17,6 +17,10 @@ public class CameraController : MonoBehaviour
     private void Update()
     {
 
+        if (Time.time < 0.5)
+            return;
+
+
         //get mouse input
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

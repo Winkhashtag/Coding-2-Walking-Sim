@@ -7,6 +7,9 @@ public class playAudio : MonoBehaviour
 {
     public float fadeTimeInSeconds;
 
+    public bool playOnce = false;
+    private bool hasInteracted = false;
+
     private AudioSource audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,10 +27,13 @@ public class playAudio : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(playOnce &&  hasInteracted)
+            return;
+
         if(other.tag == "Player")
         {
             StopAllCoroutines();
-            
+            hasInteracted = true;
             StartCoroutine(FadeAudio(true));
         }
     }
