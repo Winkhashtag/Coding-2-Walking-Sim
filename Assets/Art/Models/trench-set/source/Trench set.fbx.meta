@@ -3,7 +3,67 @@ guid: 035eb587334077d44a8cae60646fc291
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bunker Type 2 section
+    second: {fileID: 2100000, guid: 511664cbf9170ee4cbffbdc8c11d383e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bunker section
+    second: {fileID: 2100000, guid: 24db6cb21b705334aae701d527a6b4e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Corner section
+    second: {fileID: 2100000, guid: 2e33983d0ee31b14985fdf492d1fb5d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Elavated Pit Section
+    second: {fileID: 2100000, guid: f7d3f4c6f23feb64497e3dc984c7a588, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: End section
+    second: {fileID: 2100000, guid: 27bd49a41d5f64348a3cbecfe2691b01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor section
+    second: {fileID: 2100000, guid: 7dfbeef17f85af74b8014bff515d9f16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Left section
+    second: {fileID: 2100000, guid: bf1e95885fa7ecb409f3e2c622d23d09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Right section
+    second: {fileID: 2100000, guid: 3a1292406f997824fb1bb9f29a8b917f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Straight section
+    second: {fileID: 2100000, guid: 058466934bc542341b6e4352a48cc8b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Straight section(unedited)
+    second: {fileID: 2100000, guid: 0b9cc1f6f1d858a459d1816e8a300570, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Three way section
+    second: {fileID: 2100000, guid: d27a138b366cb804784b25bfd038a388, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wide section
+    second: {fileID: 2100000, guid: b5c69f033d7294a4b86d8ec8dcbc7b9c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -73,7 +133,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 2
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
