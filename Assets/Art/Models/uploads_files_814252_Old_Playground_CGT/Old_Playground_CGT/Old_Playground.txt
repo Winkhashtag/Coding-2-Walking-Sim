@@ -1,0 +1,26 @@
+Old playground
+------------------
+-Ready to game engine.
+-Low poly models.
+-Clean-up models.
+-5 models in pack.
+-Rotate details.
+------------------
+CPG_01--1458 tris.
+CPG_02--2552 tris.
+CPG_03--1236 tris.
+CPG_04--558t ris.
+CPG_05--1464 tris.
+-----------------
+All--7268 tris./4131 vert./3752 faces.
+
+PBR textures-2048x2048:
+Color
+Normal
+Gloss
+Specular
+AO
+
+File formats:
+FBX, MA
+=============================================
